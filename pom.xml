@@ -5,12 +5,16 @@ xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLS
   <groupId>org.diveintojee.poc</groupId>
   <name>${project.artifactId}</name>
   <version>0.1-SNAPSHOT</version>
+  <prerequisites>
+    <maven>3.0.3</maven>
+  </prerequisites>
+
   <build>
     <plugins>
       <plugin>
          <groupId>com.github.searls</groupId>
          <artifactId>jasmine-maven-plugin</artifactId>
-         <version>1.1.0</version>
+         <version>1.2.0.0</version>
          <executions>
            <execution>
              <goals>
@@ -20,12 +24,53 @@ xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLS
          </executions>
          <configuration>
            <preloadSources>
-             <source>jquery-1.8.2.js</source>
+             <source>jquery-1.8.3.js</source>
              <source>underscore.js</source>
              <source>backbone.js</source>
            </preloadSources>
          </configuration>
       </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-clean-plugin</artifactId>
+         <version>2.5</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.0</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-deploy-plugin</artifactId>
+         <version>2.7</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-install-plugin</artifactId>
+         <version>2.4</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-jar-plugin</artifactId>
+         <version>2.4</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-resources-plugin</artifactId>
+         <version>2.6</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-site-plugin</artifactId>
+         <version>3.2</version>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-surefire-plugin</artifactId>
+         <version>2.13</version>
+      </plugin>
+      
     </plugins>
   </build>
 </project>
